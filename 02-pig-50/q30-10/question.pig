@@ -41,3 +41,40 @@ u = LOAD 'data.csv' USING PigStorage(',')
 -- >>> Escriba su respuesta a partir de este punto <<<
 --
 
+/*
+Se escribe un archivo con el contenido de las semanas
+%%writefile diasSemana.txt
+Mon	lun	lunes
+Tue	mar	martes
+Wed	mie	miercoles
+Thu	jue	jueves
+Fri	vie	viernes
+Sat	sab	sabado
+Sun	dom	domingo
+*/
+
+a = FOREACH u GENERATE id, birthday, REGEX_EXTRACT(birthday, '(.*)-(.*)-(.*)',3) AS dia;
+b = FOREACH a GENERATE id, birthday, dia, dia as (numDia:INT), ToString(ToDate(birthday,'yyyy-MM-dd'), 'EEE' ) AS diaSem;
+
+-- Gestion de archivos del sistema local al HDFS
+fs -rm -f -r input
+fs -mkdir input
+fs -put diasSemana.txt input/diasSemana.txt
+
+m = LOAD 'input/diasSemana.txt' USING PigStorage()
+    AS (dsI:CHARARRAY,
+        dsE:CHARARRAY,
+        dsExt:CHARARRAY);
+
+c = JOIN b BY diaSem, m BY dsI;
+d = FOREACH c GENERATE id, birthday, dia, numDia, dsE, dsExt;
+
+e = ORDER d BY id;
+f = FOREACH e GENERATE birthday, dia, numDia, dsE, dsExt;
+
+
+-- escribe el archivo de salida
+STORE f INTO 'output' USING PigStorage(',');
+
+-- copia los archivos del HDFS al sistema local
+fs -get output/ .

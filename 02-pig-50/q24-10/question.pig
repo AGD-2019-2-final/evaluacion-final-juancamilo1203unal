@@ -26,3 +26,11 @@ u = LOAD 'data.csv' USING PigStorage(',')
 -- >>> Escriba su respuesta a partir de este punto <<<
 --
 
+a = FOREACH u GENERATE birthday;
+b = FOREACH a GENERATE REGEX_EXTRACT(birthday, '(.*)-(.*)-(.*)',2);
+
+-- escribe el archivo de salida
+STORE b INTO 'output' USING PigStorage(',');
+
+-- copia los archivos del HDFS al sistema local
+fs -get output/ .

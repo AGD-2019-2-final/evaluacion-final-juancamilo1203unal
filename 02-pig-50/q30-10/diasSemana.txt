@@ -1,0 +1,7 @@
+Mon	lun	lunes
+Tue	mar	martes
+Wed	mie	miercoles
+Thu	jue	jueves
+Fri	vie	viernes
+Sat	sab	sabado
+Sun	dom	domingo

@@ -27,3 +27,11 @@ u = LOAD 'data.csv' USING PigStorage(',')
 --
 -- >>> Escriba su respuesta a partir de este punto <<<
 --
+a = FILTER u BY (SUBSTRING(firstname, 0, 1) >= 'M');
+b = FOREACH a GENERATE firstname;
+
+-- escribe el archivo de salida
+STORE b INTO 'output' USING PigStorage(',');
+
+-- copia los archivos del HDFS al sistema local
+fs -get output/ .
