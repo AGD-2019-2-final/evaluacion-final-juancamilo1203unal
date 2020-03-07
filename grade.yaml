@@ -1,6 +1,6 @@
-_grade: 1.56
+_grade: 4.54
 _score: 100
-date: '2020-03-06 22:19:18.201909'
+date: '2020-03-07 03:28:23.725713'
 tree:
   00-hola_mundo-10/:
     _grade: 5.0
@@ -55,113 +55,113 @@ tree:
         _score: 10
         tree: 5.0
   02-pig-50/:
-    _grade: 0.0
+    _grade: 4.52
     _score: 50
     tree:
       q01-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q02-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q03-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q04-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q05-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q06-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q07-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q08-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q09-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q10-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q11-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q12-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q13-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q14-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q15-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q16-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q17-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q18-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q19-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q20-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q21-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q22-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q23-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q24-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q25-10/:
         _grade: 0.0
         _score: 10
         tree: 0.0
       q26-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q27-10/:
         _grade: 0.0
         _score: 10
@@ -171,67 +171,67 @@ tree:
         _score: 10
         tree: 0.0
       q29-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q30-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q31-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
   03-hive-50/:
-    _grade: 0.0
+    _grade: 5.0
     _score: 50
     tree:
       q01-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q02-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q03-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q04-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q05-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q06-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q07-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q08-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q09-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q10-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q11-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
+        tree: 5.0
       q12-10/:
-        _grade: 0.0
+        _grade: 5.0
         _score: 10
-        tree: 0.0
-2020-03-06 22:19:18.319423
+        tree: 5.0
+2020-03-07 03:28:23.924605

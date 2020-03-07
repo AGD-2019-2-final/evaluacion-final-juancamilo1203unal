@@ -40,3 +40,17 @@ LOAD DATA LOCAL INPATH 'tbl1.csv' INTO TABLE tbl1;
 -- >>> Escriba su respuesta a partir de este punto <<<
 --
 
+DROP TABLE IF EXISTS testTable; 
+CREATE TABLE testTable (letter STRING);
+INSERT OVERWRITE TABLE testTable 
+SELECT 
+    explode(c5) AS letter
+FROM
+    tbl0;
+
+INSERT OVERWRITE DIRECTORY '/tmp/output'
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+    
+SELECT letter FROM testTable GROUP BY letter ORDER BY letter;
+
+!hadoop fs -copyToLocal /tmp/output output

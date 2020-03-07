@@ -40,4 +40,15 @@ LOAD DATA LOCAL INPATH 'tbl1.csv' INTO TABLE tbl1;
 -- >>> Escriba su respuesta a partir de este punto <<<
 --
 
+DROP TABLE IF EXISTS dataTable; 
+CREATE TABLE dataTable (id INT, letraM ARRAY<CHAR(1)>);
+INSERT OVERWRITE TABLE dataTable 
+SELECT c1, collect_list(upper(exploded)) FROM tbl0 LATERAL VIEW explode(c5) exploded_table AS exploded GROUP BY c1;
 
+INSERT OVERWRITE DIRECTORY '/tmp/output'
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '\n'
+COLLECTION ITEMS TERMINATED BY ':'
+
+SELECT letraM FROM dataTable;
+
+!hadoop fs -copyToLocal /tmp/output output

@@ -40,5 +40,34 @@ LOAD DATA LOCAL INPATH 'tbl1.csv' INTO TABLE tbl1;
 --
 -- >>> Escriba su respuesta a partir de este punto <<<
 --
+DROP TABLE IF EXISTS dataTable;
+CREATE TABLE dataTable
+AS
+    SELECT
+        c2, sumRow
+    FROM (
+        SELECT
+            c2,
+            COALESCE(c6['aa'], CAST(0 AS BIGINT)) + 
+            COALESCE(c6['bb'], CAST(0 AS BIGINT)) + 
+            COALESCE(c6['cc'], CAST(0 AS BIGINT)) + 
+            COALESCE(c6['dd'], CAST(0 AS BIGINT)) AS sumRow
+        FROM
+            tbl0
+    ) table1;
+    
+DROP TABLE IF EXISTS SumDT;
+CREATE TABLE SumDT
+AS
+    SELECT c2, SUM(sumRow)
+    FROM
+        dataTable
+GROUP BY
+    c2;
+    
+INSERT OVERWRITE DIRECTORY '/tmp/output'
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
 
+SELECT * FROM SumDT;
 
+!hadoop fs -copyToLocal /tmp/output output
